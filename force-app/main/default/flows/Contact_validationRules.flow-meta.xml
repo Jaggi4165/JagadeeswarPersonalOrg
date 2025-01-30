@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <customErrors>
+        <name>Copy_1_of_Error1</name>
+        <label>Copy 1 of Error1</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <customErrorMessages>
+            <errorMessage>Title should not Null</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Error1</name>
+        <label>Error1</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Validation_Elements</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Title should not Empty</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Copy_1_of_Validation_Elements</name>
+        <label>Copy 1 of Validation Elements</label>
+        <locationX>182</locationX>
+        <locationY>587</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Title_is_emplty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Title</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Error1</targetReference>
+            </connector>
+            <label>Copy 1 of Title is emplty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Validation_Elements</name>
+        <label>Validation Elements</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Validation_Elements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Title_is_emplty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Title</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Error1</targetReference>
+            </connector>
+            <label>Title is emplty</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Contact validationRules {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact validationRules</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Validation_Elements</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

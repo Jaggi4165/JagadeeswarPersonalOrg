@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>kusumuru4165@gmail.com</contactEmail>
+    <label>Test Postman</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG9fe4g9fhX0E4aIae0_ns7TwuINpHElErFT8UMckG8ULLdU0bV1aE8Cg66xEEB3QzLjF2yIKEeUeXJsDlT</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>true</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>true</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <oauthClientCredentialUser>crohejenofro-7553@yopmail.com</oauthClientCredentialUser>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

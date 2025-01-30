@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>lwcAssignmentDay10</componentName>
+                <identifier>c_lwcAssignmentDay10</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>absyz_AssignmentDay7</componentName>
+                <identifier>c_absyz_AssignmentDay7</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>column1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>absyz_AssignmentDay9Parent</componentName>
+                <identifier>c_absyz_AssignmentDay9Parent</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>absyz_AssignmentDay8Task2</componentName>
+                <identifier>c_absyz_AssignmentDay8Task2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>column2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Assignment Day 7,8 &amp; 9</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumns</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

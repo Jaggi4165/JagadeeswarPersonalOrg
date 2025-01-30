@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DBMS</fullName>
+        <default>false</default>
+        <label>DBMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Networks</fullName>
+        <default>false</default>
+        <label>Computer Networks</label>
+    </customValue>
+    <customValue>
+        <fullName>Advanced Java</fullName>
+        <default>false</default>
+        <label>Advanced Java</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Warehousing</fullName>
+        <default>false</default>
+        <label>Data Warehousing</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Mining</fullName>
+        <default>false</default>
+        <label>Data Mining</label>
+    </customValue>
+    <masterLabel>Subjects</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

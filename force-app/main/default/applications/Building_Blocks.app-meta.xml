@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Building Blocks</label>
+    <navType>Standard</navType>
+    <tabs>standard-Lead</tabs>
+    <tabs>Project__c</tabs>
+    <tabs>Unit__c</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>BB_RM__c</tabs>
+    <tabs>Incentive__c</tabs>
+    <tabs>Payout__c</tabs>
+    <tabs>Meeting__c</tabs>
+    <tabs>My_Notes__c</tabs>
+    <tabs>Error_Log__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Building_Blocks_UtilityBar</utilityBar>
+</CustomApplication>

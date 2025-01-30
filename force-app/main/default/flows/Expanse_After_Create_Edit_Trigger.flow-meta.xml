@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Populate_Room_Member_Field_Values</name>
+        <label>Populate Room Member Field Values</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>Room_Member_Record.Individual_Expanse__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>CurrentAmount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Room_Member_Record</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Trigger_Context</name>
+        <label>Trigger Context</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>After_Insert_Update</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Valid_Expanse__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Room_Member__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Room_Member_Field_Values</targetReference>
+            </connector>
+            <label>After Insert/Update</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentAmount</name>
+        <dataType>Currency</dataType>
+        <expression>If(  ISBLANK( {!$Record.Room_Member__r.Individual_Expanse__c} )  , {!$Record.Amount__c}  , ( {!$Record.Room_Member__r.Individual_Expanse__c} - {!$Record__Prior.Amount__c} ) + {!$Record.Amount__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Expanse After Create/Edit Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Expanse After Create/Edit Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Room_Member_Record</name>
+        <label>Room Member Record</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Trigger_Context</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Room_Member__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Room_Member__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Room_Member_Record</name>
+        <label>Update Room Member Record</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputReference>Room_Member_Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Room_Member_Record</targetReference>
+        </connector>
+        <object>Expanse__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

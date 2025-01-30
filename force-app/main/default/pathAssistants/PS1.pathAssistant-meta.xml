@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account</entityName>
+    <fieldName>Industry</fieldName>
+    <masterLabel>PS1</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>AccountSource</fieldNames>
+        <fieldNames>Active__c</fieldNames>
+        <info>&lt;p&gt;Hai This is Guidancde.&lt;/p&gt;</info>
+        <picklistValueName>Agriculture</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

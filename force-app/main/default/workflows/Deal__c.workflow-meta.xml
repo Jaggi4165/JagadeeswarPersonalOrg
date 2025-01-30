@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_Amount_exceed</fullName>
+        <description>Email Alert Amount exceed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jagadeeswararao.kusumuru@absyz.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Amount_Exceed_20000</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Priority_field_update</fullName>
+        <description>Priority field update to Low</description>
+        <field>Priority__c</field>
+        <literalValue>Low</literalValue>
+        <name>Priority field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Priority_field_update2High</fullName>
+        <description>Priority field update2High</description>
+        <field>Priority__c</field>
+        <literalValue>High</literalValue>
+        <name>Priority field update2High</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Priority_field_update2medium</fullName>
+        <description>Priority field update to Medium</description>
+        <field>Priority__c</field>
+        <literalValue>Medium</literalValue>
+        <name>Priority field update2medium</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Priority_field_update_to_Low</fullName>
+        <field>Priority__c</field>
+        <literalValue>Low</literalValue>
+        <name>Priority field update to Low</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Priority_field_update_to_Medium</fullName>
+        <field>Priority__c</field>
+        <literalValue>Medium</literalValue>
+        <name>Priority field update to Medium</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>edit_counting</fullName>
+        <description>edit counting</description>
+        <field>Number_of_times_edited__c</field>
+        <formula>Number_of_times_edited__c + 1</formula>
+        <name>edit counting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Amount Not Zero</fullName>
+        <active>false</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>equals</operation>
+            <value>INR 0</value>
+        </criteriaItems>
+        <description>Amount Not Zero</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email Alert exceed 20000</fullName>
+        <actions>
+            <name>Email_Alert_Amount_exceed</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;INR 20,000&quot;</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Priority field update to High</fullName>
+        <actions>
+            <name>Priority_field_update2High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;INR 10,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;INR 20,000&quot;</value>
+        </criteriaItems>
+        <description>Priority field update to High</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Priority field update to Low</fullName>
+        <actions>
+            <name>Priority_field_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>INR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;INR 1,000&quot;</value>
+        </criteriaItems>
+        <description>Priority field update to Low</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Priority field update to Medium</fullName>
+        <actions>
+            <name>Priority_field_update2medium</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;INR 1,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Deal__c.Amount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;INR 10,000&quot;</value>
+        </criteriaItems>
+        <description>Priority field update to Medium</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>edit counts</fullName>
+        <actions>
+            <name>edit_counting</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>it shows number of editings</description>
+        <formula>ISCHANGED( Amount__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

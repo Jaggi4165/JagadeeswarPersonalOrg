@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>HallTicketNumber.Content:Topic - 1</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Topic - 1</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription>This is the topic 1 content.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Content:Topic - 2</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Topic - 2</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription>This is the topic 2 content.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Content:Topic - 3</fullName>
+        <managedTopicType>Content</managedTopicType>
+        <name>Topic - 3</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription>This is the topic 3 content.</topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Featured:Article - 1</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Article - 1</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Featured:Article - 2</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Article - 2</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Featured:demo</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>demo</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:Article - 1</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Article - 1</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:Article - 2</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Article - 2</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:One One</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>One One</name>
+        <parentName>demo</parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:One Two</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>One Two</name>
+        <parentName>demo</parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:Two One</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Two One</name>
+        <parentName>Article - 1</parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:Two Two</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Two Two</name>
+        <parentName>Article - 1</parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>HallTicketNumber.Navigational:demo</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>demo</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

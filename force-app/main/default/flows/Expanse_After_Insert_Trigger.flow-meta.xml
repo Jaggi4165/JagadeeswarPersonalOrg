@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Populating_Room_Member_Fields</name>
+        <label>Populating Room Member Fields</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Room_Member.Individual_Expanse__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Room_Member</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Room_Member_Validations</name>
+        <label>Room Member Validations</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Individual_amount_Update</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Individual_Expanse__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populating_Room_Member_Fields</targetReference>
+            </connector>
+            <label>Individual amount Update</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Expanse After Insert Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Expanse After Insert Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Room_Member</name>
+        <label>Get Room Member</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Room_Member_Validations</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Room__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Room__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Room__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Room_Member__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Room_Member</name>
+        <label>Update Room Member</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputReference>Get_Room_Member</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Room_Member</targetReference>
+        </connector>
+        <object>Expanse__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

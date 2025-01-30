@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <description>Get Account Records By Account Name</description>
+    <interviewLabel>Get Account Records {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Account Records</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Retrieve Account Recortds</description>
+        <name>Get_Account_Records</name>
+        <label>Get Account Records</label>
+        <locationX>705</locationX>
+        <locationY>75</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Enter_Your_Account_Name</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <description>Getting Records By Using Account Name</description>
+        <name>Enter_Your_Account_Name_Here_to_Get_Records</name>
+        <label>Enter Your Account Name Here to Get Records</label>
+        <locationX>452</locationX>
+        <locationY>211</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Get_Account_Records</targetReference>
+        </connector>
+        <fields>
+            <name>Enter_Your_Account_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Enter Your Account Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Enter_Your_Account_Name_Here_to_Get_Records</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>get account Id By account name</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

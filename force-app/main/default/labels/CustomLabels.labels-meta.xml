@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Github_username</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Github username</shortDescription>
+        <value>trailheadapps</value>
+    </labels>
+    <labels>
+        <fullName>Lightning_Indicator_step1_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lightning Indicator step1 name</shortDescription>
+        <value>Add Contact and Account</value>
+    </labels>
+    <labels>
+        <fullName>Lightning_Indicator_step2_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lightning Indicator step2 name</shortDescription>
+        <value>Add Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>Lightning_Indicator_step3_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lightning Indicator step3 name</shortDescription>
+        <value>Review and Create Quote</value>
+    </labels>
+    <labels>
+        <fullName>Lightning_Indicator_step4_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lightning Indicator step4 name</shortDescription>
+        <value>Place Order</value>
+    </labels>
+    <labels>
+        <fullName>accBillingAddressLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingAddressLabel</shortDescription>
+        <value>Billing Address</value>
+    </labels>
+    <labels>
+        <fullName>accBillingCodeLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingCodeLabel</shortDescription>
+        <value>Billing PostalCode</value>
+    </labels>
+    <labels>
+        <fullName>accBillingCountryLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingCountryLabel</shortDescription>
+        <value>Billing Country</value>
+    </labels>
+    <labels>
+        <fullName>accBillingStateLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingStateLabel</shortDescription>
+        <value>Billing State</value>
+    </labels>
+    <labels>
+        <fullName>accBillingStreetLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingStreetLabel</shortDescription>
+        <value>Billing Street</value>
+    </labels>
+    <labels>
+        <fullName>accBillingcityLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accBillingcityLabel</shortDescription>
+        <value>Billing City</value>
+    </labels>
+    <labels>
+        <fullName>accIndustryLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accIndustryLabel</shortDescription>
+        <value>Industry</value>
+    </labels>
+    <labels>
+        <fullName>accInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accInfoDivider</shortDescription>
+        <value>Account Information</value>
+    </labels>
+    <labels>
+        <fullName>accNameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accNameLabel</shortDescription>
+        <value>Account Name</value>
+    </labels>
+    <labels>
+        <fullName>accNumberLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accNumberLabel</shortDescription>
+        <value>Account Number</value>
+    </labels>
+    <labels>
+        <fullName>accOwnerLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accOwnerLabel</shortDescription>
+        <value>Account Owner</value>
+    </labels>
+    <labels>
+        <fullName>accPhoneLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accPhoneLabel</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>accountCreateSuccessMessageLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accountCreateSuccessMessageLabel</shortDescription>
+        <value>Account created successfully :</value>
+    </labels>
+    <labels>
+        <fullName>cancelButtonLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cancelButtonLabel</shortDescription>
+        <value>CANCEL</value>
+    </labels>
+    <labels>
+        <fullName>conInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conInfoDivider</shortDescription>
+        <value>Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>conMailingAddressLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingAddressLabel</shortDescription>
+        <value>Mailing Address</value>
+    </labels>
+    <labels>
+        <fullName>conMailingCodeLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingCodeLabel</shortDescription>
+        <value>Mailing PostalCode</value>
+    </labels>
+    <labels>
+        <fullName>conMailingCountryLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingCountryLabel</shortDescription>
+        <value>Mailing Country</value>
+    </labels>
+    <labels>
+        <fullName>conMailingStateLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingStateLabel</shortDescription>
+        <value>Mailing State</value>
+    </labels>
+    <labels>
+        <fullName>conMailingStreetLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingStreetLabel</shortDescription>
+        <value>Mailing Street</value>
+    </labels>
+    <labels>
+        <fullName>conMailingcityLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conMailingcityLabel</shortDescription>
+        <value>Mailing City</value>
+    </labels>
+    <labels>
+        <fullName>conPageAccInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conPageAccInfoDivider</shortDescription>
+        <value>Step :1.1 Select Account Information</value>
+    </labels>
+    <labels>
+        <fullName>conPageConAddressInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>conPageConAddressInfoDivider</shortDescription>
+        <value>Step :1.1 Contact Address Information</value>
+    </labels>
+    <labels>
+        <fullName>contactCreateSuccessMessageLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactCreateSuccessMessageLabel</shortDescription>
+        <value>Contact created successfully :</value>
+    </labels>
+    <labels>
+        <fullName>contactEmailLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactEmailLabel</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>contactFirstNameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactFirstNameLabel</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>contactInfoSectionDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactInfoSectionDivider</shortDescription>
+        <value>Step :1.1 Select Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>contactLastNameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactLastNameLabel</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>contactNameLable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactNameLable</shortDescription>
+        <value>Contact Name</value>
+    </labels>
+    <labels>
+        <fullName>contactPhoneLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contactPhoneLabel</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>contractNameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>contractNameLabel</shortDescription>
+        <value>Contract Name</value>
+    </labels>
+    <labels>
+        <fullName>createOrderButoonLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>createOrderButoonLabel</shortDescription>
+        <value>CREATE ORDER</value>
+    </labels>
+    <labels>
+        <fullName>createQuoteButtonLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>createQuoteButtonLabel</shortDescription>
+        <value>CREATE QUOTE</value>
+    </labels>
+    <labels>
+        <fullName>exAccLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>exAccLabel</shortDescription>
+        <value>Existing Account</value>
+    </labels>
+    <labels>
+        <fullName>exAccSectionDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>exAccSectionDivider</shortDescription>
+        <value>Select Existing Account Information</value>
+    </labels>
+    <labels>
+        <fullName>exConLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>exConLabel</shortDescription>
+        <value>Existing Contact</value>
+    </labels>
+    <labels>
+        <fullName>firstStepErrorLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>firstStepErrorLabel</shortDescription>
+        <value>Create Account &amp; Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>generalAccInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>generalAccInfoDivider</shortDescription>
+        <value>General Account Information</value>
+    </labels>
+    <labels>
+        <fullName>generalOppInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>generalOppInfoDivider</shortDescription>
+        <value>General Opportunity Information</value>
+    </labels>
+    <labels>
+        <fullName>newAccLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>newAccLabel</shortDescription>
+        <value>New Account</value>
+    </labels>
+    <labels>
+        <fullName>newConLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>newConLabel</shortDescription>
+        <value>New Contact</value>
+    </labels>
+    <labels>
+        <fullName>newConPageGeneralConInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>newConPageGeneralConInfoDivider</shortDescription>
+        <value>General Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>newPageAccAddressInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>newPageAccAddressInfoDivider</shortDescription>
+        <value>Step :1.1 Account Address Information</value>
+    </labels>
+    <labels>
+        <fullName>nextButtonLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>nextButtonLabel</shortDescription>
+        <value>NEXT</value>
+    </labels>
+    <labels>
+        <fullName>noSuchDataLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>noSuchDataLabel</shortDescription>
+        <value>No Such Contact Data Found !</value>
+    </labels>
+    <labels>
+        <fullName>oppAmountLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>oppAmountLabel</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>oppCloseDateLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>oppCloseDateLabel</shortDescription>
+        <value>Close Date</value>
+    </labels>
+    <labels>
+        <fullName>oppInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>oppInfoDivider</shortDescription>
+        <value>Opportunity Information</value>
+    </labels>
+    <labels>
+        <fullName>oppNameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>oppNameLabel</shortDescription>
+        <value>Opportunity Name</value>
+    </labels>
+    <labels>
+        <fullName>oppStagenameLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>oppStagenameLabel</shortDescription>
+        <value>Stage Name</value>
+    </labels>
+    <labels>
+        <fullName>previousButtonLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>previousButtonLabel</shortDescription>
+        <value>PREVIOUS</value>
+    </labels>
+    <labels>
+        <fullName>selectOppInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectOppInfoDivider</shortDescription>
+        <value>Step :2.1 Select Opportunity Information</value>
+    </labels>
+    <labels>
+        <fullName>selectedAccInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectedAccInfoDivider</shortDescription>
+        <value>STEP : 2.1 Selected Account Information</value>
+    </labels>
+    <labels>
+        <fullName>selectedAccountMessageLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectedAccountMessageLabel</shortDescription>
+        <value>Selected Account :</value>
+    </labels>
+    <labels>
+        <fullName>selectedContactMessageLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectedContactMessageLabel</shortDescription>
+        <value>Selected Contact :</value>
+    </labels>
+    <labels>
+        <fullName>selectedOppInfoDivider</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectedOppInfoDivider</shortDescription>
+        <value>STEP : 2.1 Selected Opportunity Information</value>
+    </labels>
+</CustomLabels>

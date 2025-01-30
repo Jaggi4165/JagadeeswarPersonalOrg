@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Incentive62</label>
+    <protected>false</protected>
+    <values>
+        <field>Employee_Name__c</field>
+        <value xsi:type="xsd:string">Yatin</value>
+    </values>
+    <values>
+        <field>Employee_Role__c</field>
+        <value xsi:type="xsd:string">Premium Head</value>
+    </values>
+    <values>
+        <field>Incentive_Percentage__c</field>
+        <value xsi:type="xsd:double">17.0</value>
+    </values>
+    <values>
+        <field>Opportunity_Source__c</field>
+        <value xsi:type="xsd:string">Retail</value>
+    </values>
+    <values>
+        <field>Project_Segment__c</field>
+        <value xsi:type="xsd:string">Premium</value>
+    </values>
+    <values>
+        <field>Type_Of_Sale__c</field>
+        <value xsi:type="xsd:string">Direct</value>
+    </values>
+    <values>
+        <field>User_Type__c</field>
+        <value xsi:type="xsd:string">Premium</value>
+    </values>
+</CustomMetadata>

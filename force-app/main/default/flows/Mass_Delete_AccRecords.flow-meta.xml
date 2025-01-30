@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <description>Mass Delete AccRecords</description>
+    <interviewLabel>Mass Delete AccRecords {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Mass Delete AccRecords</label>
+    <loops>
+        <description>store all the ids</description>
+        <name>Id_store</name>
+        <label>Id store</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <collectionReference>ids</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Delete_Selected_Records</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <description>Mass Delete The Records</description>
+        <name>Delete_Selected_Records</name>
+        <label>Delete Selected Records</label>
+        <locationX>264</locationX>
+        <locationY>278</locationY>
+        <connector>
+            <targetReference>Id_store</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Id_store</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+    </recordDeletes>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Id_store</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <description>store the selected recordIds</description>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

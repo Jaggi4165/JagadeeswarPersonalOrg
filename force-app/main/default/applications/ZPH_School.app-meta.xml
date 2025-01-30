@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#1D0DF4</headerColor>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>true</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>ZPH School</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>My_Notes__c</tabs>
+    <tabs>Error_Log__c</tabs>
+    <tabs>Book__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>ZPH_School_UtilityBar</utilityBar>
+</CustomApplication>
